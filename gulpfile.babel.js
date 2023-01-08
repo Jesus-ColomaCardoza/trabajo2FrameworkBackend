@@ -1,6 +1,6 @@
 //Constantes para el automatizador de tareas
 const gulp = require("gulp")
-const sass = require("gulp-sass")
+const sass = require("gulp-sass")(require("sass"));
 const babel = require("gulp-babel")
 const autoprefixer = require("gulp-autoprefixer")
 const concat = require("gulp-concat")
@@ -20,7 +20,7 @@ gulp.task("styles", () => {
         .pipe(plumber())
         .pipe(
             sass({
-                outputStyle: "compact"
+                outputStyle: "compressed"
             })
         )
         .pipe(autoprefixer())
@@ -45,9 +45,9 @@ gulp.task("babel", () => {
 //tarea por defecto para que se ejecuten todas
 gulp.task('default', () => {
     //Iniciación del servidor en el puerto 80
-    server.init({
-        proxy: 'localhost'
-    })
+    // server.init({
+    //     proxy: 'localhost'
+    // })
 
 
     //Watchers (vigilantes) para vigilar los cambios y mostrarlos en tiempo real

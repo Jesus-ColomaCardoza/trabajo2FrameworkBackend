@@ -1,39 +1,48 @@
 {
-  "name": "crud-node",
+  "name": "crud-node-mysql-inicial",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "nodemon src/app.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.2"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-destructuring": "^7.4.4",
-    "@babel/preset-env": "^7.3.4",
-    "autoprefixer": "^9.3.1",
-    "babel-plugin-import": "^1.12.0",
-    "browser-sync": "^2.26.3",
-    "cssnano": "^4.1.7",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-destructuring": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "autoprefixer": "^10.4.13",
+    "babel-plugin-import": "^1.13.5",
+    "browser-sync": "^2.27.11",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "morgan": "^1.9.1",
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.18.7"
-  },
-  "dependencies": {
-    "express": "^4.16.4",
-    "mysql": "^2.17.1",
-    "pug": "^2.0.3"
+    "morgan": "^1.10.0",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "sass": "^1.57.1"
   }
 }

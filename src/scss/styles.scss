@@ -1,25 +1,33 @@
 body {
     font-family: sans-serif;
     overflow: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(14,15,47,1) 41%, rgba(23,78,89,1) 100%);
+    background-repeat: no-repeat;
 }
 
 .main {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
     overflow: hidden;
     min-height: 100vh;
+    display: flex;
 }
 
 .all-users,
 .user-info {
-    background: steelblue;
-    width: 100%;
+    background: rgb(17, 66, 107);
+    margin: .5em;
 }
 
 .all-users {
-    margin-bottom: 1rem;
+    width: 80%;
+    order: 2;
+}
+.user-info {
+    width: 20%;
+    order: 1;
 }
 
 .top-bar {
@@ -29,7 +37,6 @@ body {
     padding: 0 1em;
     color: #fff;
     border-bottom: 3px solid #fff;
-
     &__buttons {
         display: flex;
         align-items: center;
@@ -46,28 +53,40 @@ body {
 }
 
 .content {
-
     &__header,
     &__user {
         display: grid;
         grid-template-columns: repeat(3, 1fr) 150px 150px;
-        background: lightblue;
+        background: rgb(224, 230, 233);
         align-items: center;
         justify-items: center;
 
         &--user-info {
-            grid-template-columns: repeat(3, 1fr) 150px 150px;
+            // grid-template-columns: repeat(3, 1fr) 150px 150px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             padding: 1em .5em;
         }
     }
 
     &__header {
-        border-bottom: 1px solid grey;
-
+        border-bottom: 3px solid grey;
+        position: sticky;//nc
+        top: 0;//nc
+        left: 0;//nc
         & p:last-child {
             grid-column: span 2;
             justify-self: center
         }
+    }
+    // &__user{
+    //     border-bottom: 1px solid grey;
+    // }
+    &__users{
+        background: rgb(224, 230, 233);
+        height:70vh;
+        overflow-y: scroll;//nc 
     }
 
     &__link {
@@ -78,13 +97,17 @@ body {
     &__text {
         text-transform: capitalize;
 
-        &.content__text--email {
+        &--email {
             text-transform: lowercase;
         }
 
         &--header {
             text-transform: uppercase;
         }
+        &--item{
+            margin: .5em 0 ;
+        }
+
     }
 }
 
@@ -103,6 +126,10 @@ body {
 
     &--edit {
         background: green;
+        margin-left: 7em;
+    }
+    &--delete{
+        margin-right: 7em;
     }
 
     &--delete,
@@ -112,5 +139,13 @@ body {
 
     &--hide {
         display: none;
+    }
+
+    &--addUser{
+        background: green;
+    }
+
+    &--cancel{
+        margin-right: 1em;
     }
 }
